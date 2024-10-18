@@ -1,0 +1,105 @@
+.anim {
+    position: relative;
+    display: inline-block; /* Permite que los enlaces se alineen uno al lado del otro */
+    overflow: hidden;
+    height: 50px; /* Ajusta según el tamaño de tus textos */
+    width: 150px; /* Ajusta el ancho del enlace según sea necesario */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Hereda el color del texto */
+    margin-right: 20px; /* Espacio entre los enlaces */
+    text-align: center; /* Centra el texto dentro del enlace */
+}
+
+.texto {
+    position: absolute;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    width: 100%;
+    top: 50%; /* Centra verticalmente el texto */
+    transform: translateY(-50%); /* Ajuste para centrar verticalmente el texto */
+}
+.visible {
+    transform: translateY(1);
+    opacity: 1; /* Totalmente visible */
+    z-index: 1; /* Está por encima */
+}
+
+
+.oculto {
+    display: none; /* Oculta el texto inicialmente */
+    transform: translateY(20px); /* Ajusta la distancia de la animación */
+    opacity: 0;
+}
+
+
+.anim:hover .visible {
+    transform: translateY(-20px); /* Sube el texto visible */
+    opacity: 0; /* Se oculta */
+}
+
+.anim:hover .oculto {
+    transform: translateY(0); /* Muestra el texto oculto */
+    opacity: 1; /* Se hace visible */
+}
+
+
+
+
+.anim:hover .visible {
+    transform: translateY(-20px); /* Sube el texto visible */
+    opacity: 0; /* Se oculta */
+}
+
+.anim:hover .oculto {
+    transform: translateY(0); /* Muestra el texto oculto */
+    opacity: 1; /* Se hace visible */
+}
+
+/* FIN DEL SECUESTRO */
+
+
+header{
+    width: 90%;
+    margin: auto;
+    
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2%;
+}
+
+svg.fulllogo{
+    width: 100%;
+    filter: invert(1);
+}
+
+nav >div:nth-child(1) > div:nth-child(1) {
+    width: 15%;
+}
+nav >div:nth-child(1) > div:nth-child(2)> img {
+    width: 70%;
+    filter: invert(1);
+}
+
+nav >div:nth-child(1) {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+nav > div:nth-child(2) {
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    justify-content: space-between; 
+}
+
+
+
+.boton{
+    font-weight: bold;
+    border: solid 2px #303436;
+    border-radius: 37px;
+}
+
+
