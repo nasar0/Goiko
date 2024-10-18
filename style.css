@@ -2,8 +2,6 @@
     position: relative;
     display: inline-block; /* Permite que los enlaces se alineen uno al lado del otro */
     overflow: hidden;
-    height: 50px; /* Ajusta según el tamaño de tus textos */
-    width: 150px; /* Ajusta el ancho del enlace según sea necesario */
     text-decoration: none; /* Elimina el subrayado del enlace */
     color: inherit; /* Hereda el color del texto */
     margin-right: 20px; /* Espacio entre los enlaces */
@@ -12,50 +10,47 @@
 
 .texto {
     position: absolute;
-    transition: transform 0.5s ease, opacity 0.5s ease;
+    transition: transform 0.8s ease, opacity 0.8s ease; /* Anima tanto la posición como la opacidad */
     width: 100%;
     top: 50%; /* Centra verticalmente el texto */
-    transform: translateY(-50%); /* Ajuste para centrar verticalmente el texto */
-}
-.visible {
-    transform: translateY(1);
-    opacity: 1; /* Totalmente visible */
-    z-index: 1; /* Está por encima */
+    left: 0;
+    transform: translateY(-50%); /* Mantiene el texto centrado verticalmente */
 }
 
+.visible {
+    transform: translateY(-50%); /* Centrado verticalmente */
+    opacity: 1; /* Visible al inicio */
+    z-index: 1; /* Está por encima del texto oculto */
+}
 
 .oculto {
-    display: none; /* Oculta el texto inicialmente */
-    transform: translateY(20px); /* Ajusta la distancia de la animación */
-    opacity: 0;
+    transform: translateY(50%); /* Inicialmente más abajo para que la separación sea más visible */
+    opacity: 0; /* Oculto al inicio */
+    z-index: 0; /* Detrás del texto visible */
 }
 
-
 .anim:hover .visible {
-    transform: translateY(-20px); /* Sube el texto visible */
+    transform: translateY(-150%); /* Sube el texto visible más hacia arriba */
     opacity: 0; /* Se oculta */
 }
 
 .anim:hover .oculto {
-    transform: translateY(0); /* Muestra el texto oculto */
-    opacity: 1; /* Se hace visible */
+    transform: translateY(-50%); /* El texto oculto sube al centro */
+    opacity: 1; /* Aparece */
+    z-index: 1; /* Se asegura que esté por encima del texto visible */
 }
-
-
-
-
-.anim:hover .visible {
-    transform: translateY(-20px); /* Sube el texto visible */
-    opacity: 0; /* Se oculta */
-}
-
-.anim:hover .oculto {
-    transform: translateY(0); /* Muestra el texto oculto */
-    opacity: 1; /* Se hace visible */
-}
-
 /* FIN DEL SECUESTRO */
+@font-face {
+    font-family: 'Knockout'; /* Cambia por el nombre de la fuente */
+    src: url('fonts/Knockout\ HTF49Liteweight\ Regular.otf') format('truetype'); /* Cambia el nombre del archivo según corresponda */
+}
 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
+    margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;
+}
+body{
+    background-color: black;
+}
 
 header{
     width: 90%;
@@ -88,18 +83,95 @@ nav >div:nth-child(1) {
 }
 
 nav > div:nth-child(2) {
+    width: 30%;
     display: flex;
     gap: 20px; 
+    margin: 0 5%;
     align-items: center;
     justify-content: space-between; 
 }
-
-
-
-.boton{
-    font-weight: bold;
-    border: solid 2px #303436;
-    border-radius: 37px;
+.container{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    padding-bottom: 4%;
 }
 
 
+.boton{
+    height: 1.8rem; /* Ajusta según el tamaño de tus textos */
+    width: 9.3rem ; /* Ajusta el ancho del enlace según sea necesario */
+    font-weight: bold;
+    border: solid 2px #303436;
+    border-radius: 37px;
+    padding: 0% 20%;
+}
+.boton:hover{
+    height: 1.8rem; /* Ajusta según el tamaño de tus textos */
+    width: 9.3rem ; /* Ajusta el ancho del enlace según sea necesario */
+    font-weight: bold;
+    border: solid 2px #303436;
+    border-radius: 37px;
+    padding: 0% 20%; 
+    background-color: #181A1B; /* Negro con un poco de opacidad */
+}
+#alter.boton{
+    background-color: red;
+    border: solid red;
+}
+#alter.boton:hover{
+    background: #996D00;
+    border: solid #B37F00;
+}
+div>video{
+    width: 50%;
+}
+video{
+    z-index: 9;
+    width: 100%;
+    margin: auto;
+    position: absolute; 
+    top: 0;
+    left: 25%;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: 1; 
+}
+.slide p {
+    font-size: 113px;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    display: flex;
+    font-family: 'Knockout';
+   
+}
+.slider {
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider .slide-trak {
+    display: flex;
+    animation: scroll 40s linear infinite;
+    width: calc(200px * 8); 
+    margin-bottom: 5px; /* Espacio entre cada slide-trak */
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+span{
+    font-weight: bold;
+    color: white;
+}

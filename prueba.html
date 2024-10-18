@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Texto Intercalada</title>
+    <style>
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100px; /* Altura ajustable según necesidades */
+            overflow: hidden;
+        }
+
+        .moving-text-left {
+            position: absolute;
+            left: 0; /* Comienza desde la izquierda */
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap; /* Evita que el texto se rompa */
+            animation: moveRight 5s linear infinite alternate; /* De izquierda a derecha */
+        }
+
+        .moving-text-right {
+            position: absolute;
+            right: 0; /* Comienza desde la derecha */
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap; /* Evita que el texto se rompa */
+            animation: moveLeft 5s linear infinite alternate; /* De derecha a izquierda */
+        }
+
+        @keyframes moveRight {
+            0% {
+                left: 0; /* Comienza desde la izquierda */
+            }
+            100% {
+                left: 100%; /* Se mueve completamente a la derecha */
+            }
+        }
+
+        @keyframes moveLeft {
+            0% {
+                right: 0; /* Comienza desde la derecha */
+            }
+            100% {
+                right: 100%; /* Se mueve completamente a la izquierda */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="moving-text-left">
+            <p>KEVIN <span>BACON</span></p>
+        </div>
+        <div class="moving-text-right">
+            <p>KEVIN <span>BACON</span></p>
+        </div>
+    </div>
+
+    <div>
+        <p><span>KEVIN </span>BACON</p>
+        <p><span>KEVIN </span>BACON</p>
+        <p><span>KEVIN </span>BACON</p>
+    </div>
+</body>
+</html>
+
+
+
