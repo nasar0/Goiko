@@ -33,17 +33,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 .anim{
     overflow: hidden;
     text-decoration: none;
@@ -53,33 +42,15 @@
     align-items:center; 
     padding: 10%;
 }
-.texto {
+.giro {
     transition: transform 0.8s ease, opacity 0.8s ease;
     transform: translateY(-50%); 
-    position: absolute;
     
 }
-.visible {
-    transform: translateY(-50%); 
-    opacity: 1; 
-    z-index: 1; 
-}
-
 .oculto {
-    transform: translateY(50%); 
+    display: none; 
     opacity: 0; 
-    z-index: 0;
-}
-
-.anim:hover .visible {
-    transform: translateY(-150%); 
-    opacity: 0; 
-}
-
-.anim:hover .oculto {
-    transform: translateY(-50%); 
-    opacity: 1; 
-    z-index: 1; 
+    transition: opacity 0.5s ease; 
 }
 
 
