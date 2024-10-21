@@ -32,5 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Asegura que el texto visible sea completamente opaco
             }, 0); // Pequeña pausa para que el texto visible aparezca
         });
+
+
     });
+    let ham = document.querySelector(".ham");
+    let menu = document.querySelector(".menu");
+
+    ham.addEventListener("click", () => {
+        menu.classList.toggle("mostrarmenu");
+    });
+
 });

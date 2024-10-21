@@ -1,5 +1,5 @@
 #menu{
-    height: 100vh;
+    display: none;
     background-color: #EE2737;
     font-family: 'Knockout';
     position: absolute;
@@ -9,6 +9,11 @@
     z-index: 999;
 }
 
+
+.mostrarmenu {
+    display: block; 
+    height: 100vh;
+}
 
 #menu >div>div:first-child{
     font-size: 140px;
@@ -153,6 +158,8 @@ nav > div:nth-child(2) {
     z-index: 1; 
 
 }
+
+
 .slide p {
     font-size: 113px;
     display: flex;
@@ -166,7 +173,6 @@ nav > div:nth-child(2) {
     overflow: hidden;
     width: 100%;
 }
-
 .slider .slide-trak {
     display: flex;
     animation: scroll 40s linear infinite;
@@ -181,11 +187,11 @@ nav > div:nth-child(2) {
         transform: translateX(-100%);
     }
 }
-
 .slider span{
     font-weight: bold;
     color: white;
 }
+
 main>section:nth-child(1){
     padding-bottom: 5%;
 }
