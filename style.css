@@ -1,5 +1,6 @@
 #menu{
     display: none;
+    height: 100vh;
     background-color: #EE2737;
     font-family: 'Knockout';
     position: absolute;
@@ -8,11 +9,8 @@
     color: white;
     z-index: 999;
 }
-
-
-.mostrarmenu {
-    display: block; 
-    height: 100vh;
+#menu.visible {
+    transform: translateX(0); 
 }
 
 #menu >div>div:first-child{
@@ -22,6 +20,8 @@
    display: flex;
    font-size: 60px;
    gap: 4%;
+   
+   
 }
 #menu p:hover{
     text-decoration: underline;
@@ -35,7 +35,9 @@
     font-size: 100px;
     
 }
-
+#menu>:nth-child(2){
+    margin-left:7% ;
+}
 
 
 .anim{
@@ -90,7 +92,7 @@ nav{
     
 }
 
-svg.fulllogo{
+header svg.fulllogo{
     width: 100%;
     filter: invert(1);
 }
@@ -410,4 +412,8 @@ main>section:nth-child(1){
 #noticias p{
     color: rgba(255, 255, 255, 0.466);
     margin: auto;
+}
+
+footer {
+    background: white;
 }
