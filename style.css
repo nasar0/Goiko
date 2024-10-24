@@ -130,7 +130,6 @@ nav > div:nth-child(2) {
 }
 .boton{
     height: 2rem; 
-    width: 9.3rem ; 
     font-weight: bold;
     border: solid 2px #303436;
     border-radius: 37px;
@@ -138,7 +137,6 @@ nav > div:nth-child(2) {
 }
 .boton:hover{
     height: 1.8rem; 
-    width: 9.3rem ; 
     font-weight: bold;
     border: solid 2px #303436;
     border-radius: 37px;
