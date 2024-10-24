@@ -62,8 +62,8 @@
 
 
 @font-face {
-    font-family: 'Knockout'; 
-    src: url('fonts/Knockout\ HTF49Liteweight\ Regular.otf') format('truetype'); 
+    font-family: Knockout; 
+    src: url('fonts/Knockout-HTF73-FullHeviweight.386a901fd564bd4a47c7.woff2') format('truetype'); 
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video{
@@ -169,7 +169,7 @@ nav > div:nth-child(2) {
 .slide p {
     font-size: 113px;
     display: flex;
-    font-family: 'Knockout';
+    font-family: Knockout;
     color: rgb(0, 0, 0);
     font-weight: bold;
     z-index: 0; 
@@ -226,7 +226,7 @@ main>section:nth-child(1){
 .container>div:nth-child(2) span{
     font-size: 90px;
     font-weight: bold;
-    font-family: 'Knockout';
+    font-family: Knockout;
 }
 .carrusel .container>div:nth-child(2){
     position: absolute;
@@ -271,24 +271,40 @@ main>section:nth-child(1){
     margin: auto;
 }
 
-#num>.container{
-    color: white;
+#num {
+    background-color: black;
     text-align: center;
+    padding: 5% 0;
 }
 
-#num>.container>div:nth-child(1){
-    font-size: 100px;
-    font-family: 'Knockout';
+#num h2 {
+    color: white;
+    font-size: 5rem;
+    font-weight: bold;
+    margin-bottom: 8%;
+    letter-spacing: 3px;
 }
-#imagenesnumeros{
-    width: 30%;
-    margin: auto;
+
+
+#num .container>div {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
 }
-#imagenesnumeros>div{
-    width: 15%;
-    display: flex;
+
+
+
+#num .container>div div:nth-child(1) {
+    margin-right: 8%;
+}
+
+#num .container>div div:nth-child(2) {
+    margin-right: 8%;
+}
+
+#num .container>div img {
+    width: auto;
+    height: 200px;
 }
 
 #moneda{
@@ -327,17 +343,21 @@ main>section:nth-child(1){
     padding-bottom: 0%;
     color: white;
     position: relative;
+    background: linear-gradient(to bottom, transparent, black)
 } 
 .segundo .container{
     position: absolute;
     z-index: 3;
     top: 70%;
     margin: 0 5%;
+    
 
 }
 .segundo .container>div:nth-child(2) {
     padding-top: 0%;
     z-index: 1;
+    
+    
 }
 
 .fondoVideo{
@@ -345,11 +365,10 @@ main>section:nth-child(1){
     height: auto; 
     object-fit: cover;
     z-index: -1;
-    position: static;
+    position: relative;
+    
 }
-.segundo >.container{
-     
-}
+
 .segundo>div p{
     color: white;
     font-size: 20px;
@@ -358,7 +377,7 @@ main>section:nth-child(1){
 .segundo>div span{
     font-size: 90px;
     font-weight: bold;
-    font-family: 'Knockout';
+    font-family: Knockout;
 }
 
 #cocina > .container{
