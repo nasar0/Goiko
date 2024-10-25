@@ -122,7 +122,8 @@ nav > div:nth-child(2) {
 .container{
     width: 90%;
     margin: auto;
-    padding-bottom: 4%;
+    padding: 4% 0;
+
 }
 
 #inicio{
@@ -430,4 +431,45 @@ main>section:nth-child(1){
 
 footer {
     background: white;
+}
+
+footer>div{
+    display: flex;
+    justify-content: space-between; 
+    gap: 15%;
+}
+#grueso a{
+    font-weight: bolder;
+    text-decoration: none;
+    font-size: 40px;
+    text-transform: uppercase;
+    color: black;
+    font-family: Knockout;
+}
+#fino a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: grey;
+    font-family: Knockout;
+}
+
+footer>div>div{
+    width: 32%;
+}footer>div>div>div:nth-child(1){
+    padding-bottom: 10%
+}
+footer svg.fulllogo{
+    width: 100%; 
+}
+
+footer >div:nth-child(1) > div:nth-child(1) {
+    width: 5%;
+}
+footer div:nth-child(3){
+    margin: auto;
+}
+footer #termino{
+    display: flex;
+    justify-content: center;
+    
 }
