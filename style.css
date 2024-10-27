@@ -48,7 +48,6 @@
     width: 90%;
     margin: auto;
     padding: 4% 0;
-
 }
 
 .slider {
@@ -215,8 +214,8 @@ main>section:nth-child(1){
     background-position: center;
     padding-top: 10%;
     padding-bottom: 5%;
-    
 }
+
 #flechas{
     display: flex;
     margin-left: 90%;
@@ -340,11 +339,6 @@ main>section:nth-child(1){
 
 }
 
-#flechas{
-    display: flex;
-    margin-left: 90%;
-}
-
 #segundo{
     padding-top: 0%;
     padding-bottom: 0%;
@@ -399,6 +393,7 @@ main>section:nth-child(1){
 #cocina a{
     width: 20%;
 }
+
 #noticias h2{
     color: white;
     font-size: 30px;
@@ -500,4 +495,96 @@ footer #termino{
 }
 footer .slide span{
     -webkit-text-stroke: 1px rgb(0, 0, 0);
+}
+
+@media (max-width: 1200px) {
+    .container{
+        width: 80%;
+    }
+    #menu >div>div:first-child{
+        font-size: 100px;
+    }
+    #menu >div>div:nth-child(2){
+       font-size: 40px;
+    }
+    #menu>div:first-child{
+        width: 10%;
+    }
+    #menu span{
+        font-size: 100px;
+    }
+
+    header{
+        width: 80%;
+    }
+    nav >div:nth-child(1) > div:nth-child(1) {
+        width: 20%;
+    }
+    #carrusel2>div{
+        display: flex;
+        justify-content: space-between; 
+        flex-direction: column;
+        margin: auto;
+    }
+
+    #carrusel2>div>div{
+        width: 80%;
+        margin: auto;
+        padding-bottom: 4%;
+    }
+    
+    #num h2 {
+        font-size: 2rem;
+    }
+
+    #num .container>div img {
+        height: 150px;
+    }
+   
+    #especial {
+        width: 30%;
+    }
+    
+    #cocina {
+        padding-top: 20%;
+    }
+    #cocina > .container{
+        flex-direction: column;
+    }
+    #cocina h2{
+        font-size: 80px;
+    }
+    #noticias h2{
+        color: white;
+        font-size: 30px;
+    }
+    #noticias h2:hover{
+        color: white;
+        font-size: 30px;
+        text-decoration: underline;
+    }
+    #noticias{
+        padding:5% 0;
+    }
+    #noticias>div{
+        flex-direction: column;
+    }
+    #noticias>div>div {
+        width: 70%;
+        margin: auto;
+        padding: 4% 0;
+    }
+    
+    #grueso a{
+        font-size: 30px;
+    }
+
+
+}
+@media (max-width: 480px) {
+    footer{
+        display: none;
+    }
+
+
 }
