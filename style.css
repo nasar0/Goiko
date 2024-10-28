@@ -59,7 +59,29 @@
     animation: scroll 40s linear infinite;
     margin-bottom: 5px; 
 }
+.slide p {
+    font-size: 113px;
+    display: flex;
+    font-family: Knockout;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    z-index: 0; 
+    -webkit-text-stroke: 1px white;
+}
 
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.slider span{
+    font-weight: bold;
+    color: white;
+}
 
 
 #menu{
@@ -177,29 +199,6 @@ nav > div:nth-child(2) {
     object-fit: cover; 
     z-index: 1; 
 
-}
-.slide p {
-    font-size: 113px;
-    display: flex;
-    font-family: Knockout;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    z-index: 0; 
-    -webkit-text-stroke: 1px white;
-}
-
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-.slider span{
-    font-weight: bold;
-    color: white;
 }
 
 main>section:nth-child(1){
@@ -581,7 +580,7 @@ footer .slide span{
 
 
 }
-@media (max-width: 480px) {
+@media (max-width: 680px) {
     footer{
         display: none;
     }
