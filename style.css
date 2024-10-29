@@ -375,7 +375,6 @@ main>section:nth-child(1){
     object-fit: cover;
     z-index: -1;
     position: relative;
-    
 }
 
 
@@ -506,18 +505,18 @@ footer .slide span{
     #menu >div>div:nth-child(2){
        font-size: 40px;
     }
-    #menu>div:first-child{
-        width: 10%;
-    }
-    #menu span{
-        font-size: 100px;
-    }
 
     header{
         width: 80%;
     }
     nav >div:nth-child(1) > div:nth-child(1) {
         width: 20%;
+    }
+    #inicio video{
+        padding-top: 15%;
+        left: 19%;
+        width: 70%; 
+        height: 70%; 
     }
     #carrusel2>div{
         display: flex;
@@ -580,10 +579,42 @@ footer .slide span{
 
 
 }
-@media (max-width: 680px) {
-    footer{
+@media (max-width: 780px) {
+    #idoma{
         display: none;
     }
+    #menu >div>div:first-child{
+        font-size: 80px;
+    }
+    #menu >div>div:nth-child(2){
+       font-size: 35px;
+    }
+    #inicio video{
+        padding-top: 25%;
+        left: 19%;
+        width: 60%; 
+        height: 50%; 
+    }
 
-
+    #num .container>div img {
+        height: 100px;
+    }
+    #moneda{
+        color: white;
+        background: linear-gradient(to bottom, #000000, #800000);
+    }
+    #moneda .container{
+        display: flex;
+        align-items:center ;
+        flex-direction: column;
+    }
+   
+    #especial {
+        width: 100%;
+        text-align: center;
+    }
+    #especial a{
+        align-items: center;
+        justify-content: center;
+    }
 }

@@ -9,15 +9,14 @@
             display: none; 
             opacity: 0; 
             transition: opacity 0.5s ease; 
-        }
-        a{
-            ;
+            
         }
     </style>
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <script src="script.js"></script>
 </head>
 <body>
     <a href="#" class="anim boton" >
@@ -27,27 +26,35 @@
 </body>
 <script>
    document.addEventListener('DOMContentLoaded', function() {
+        let enlaces = document.querySelectorAll("a");
 
-        let enlaces = document.querySelectorAll("a")
-        let oculto = document.querySelector(".oculto")
-        let visible = document.querySelector(".visible")
         enlaces.forEach(enlace => {
-            enlace.addEventListener("mouseover", () => {
-                enlace.style.color ="red"
-                visible.classList.add("animate__animated","animate__flipOutX")
-                
-                setTimeout(()=>{
-                    visible.style.display="none"
-                    oculto.style.display = "block";
-                    oculto.style.opacity=1;
-                    oculto.classList.add("animate__animated","animate__flipInX")
-                },300)
-                
-            })
+            let oculto = document.querySelector(".oculto");
+            let visible = document.querySelector(".visible");
             
+            enlace.addEventListener("mouseover", () => {
+                visible.classList.add("animate__animated", "animate__flipOutX");
+                
+                setTimeout(() => {
+                    visible.style.display = "none";
+                    oculto.style.display = "block";
+                    oculto.style.opacity = 1;
+                    oculto.classList.add("animate__animated", "animate__flipInX");
+                }, 300);
+            });
+            
+            enlace.addEventListener("mouseleave", () => {
+                visible.classList.remove("animate__animated", "animate__flipOutX");
+                setTimeout(() => {
+                    oculto.style.display = "none";
+                    visible.style.display = "block";
+                    oculto.style.opacity = 0;
+                    oculto.classList.remove("animate__animated", "animate__flipInX");
+                }, 300);
+            });
         });
-    
+
     });
  
-</script>
+</script> 
 </html>
