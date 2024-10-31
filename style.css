@@ -494,6 +494,10 @@ footer #termino{
 footer .slide span{
     -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
+footer .slider{
+    border-top:solid 2px black;
+    border-bottom:solid 2px black;
+}
 
 @media (max-width: 1200px) {
     .container{
@@ -617,4 +621,60 @@ footer .slide span{
         align-items: center;
         justify-content: center;
     }
+
+    #segundo a{
+        font-size: 20px;
+    }
+    #segundo>div p{
+        color: white;
+        font-size: 20px; 
+    }
+    #segundo>div span{
+        font-size: 70px;
+    }
+    .fondoVideo{
+        height: 60vh;
+    }
+    #cocina h2{
+        font-size: 60px;
+    }
+    #cocina a{
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    footer>div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+    }
+    
+    
+    footer>div>div{
+        width: 32%;
+    }
+    
+    footer >div:nth-child(1) > div:nth-child(1) {
+        width: 30%;
+    }
+
+    #termino{
+        width: 100%;
+        /* padding: 30px ; */
+        justify-content: space-between;
+    }
+    #termino div{
+        width: 30%;
+    }
+    #termino div a{
+        font-size: .8rem;
+    }
+    #termino div span{
+        font-size: .8rem;
+    }
+    
 }
