@@ -15,6 +15,9 @@
     display: flex;
     align-items: center;
 }
+.rotar{
+    transform: rotateY('150deg');
+}
 .boton:hover{
     height: 1.8rem; 
     font-weight: bold;
@@ -234,6 +237,9 @@ main>section:nth-child(1){
 .carrusel .container>div:nth-child(2){
     position: absolute;
     padding-top: 18%;
+}
+.carrusel a{
+    font-size: 30px;
 }
 .movimiento{
     border-top:solid 2px white;
@@ -482,6 +488,7 @@ footer >div:nth-child(1) > div:nth-child(1) {
 footer #termino{
     display: flex;
     justify-content: center;
+    padding-top: 5%; 
 }
 #termino a{
     text-decoration: none;

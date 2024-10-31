@@ -19,13 +19,13 @@ document.addEventListener('DOMContentLoaded', function() {
             let visible = enlace.querySelector(".visible");
             let oculto = enlace.querySelector(".oculto");
 
-            visible.classList.add("animate__animated", "animate__flipOutX");
+            visible.classList.add("animate__animated", "animate__flipOutX","rotar");
 
             setTimeout(() => {
                 visible.style.display = "none";
                 oculto.style.display = "block";
                 oculto.style.opacity = 1;
-                oculto.classList.add("animate__animated", "animate__flipInX");
+                oculto.classList.add("animate__animated", "animate__flipInX","rotar");
             }, 300);
         });
 
